@@ -6,11 +6,11 @@
 /*   By: iakyaou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 14:12:21 by iakyaou           #+#    #+#             */
-/*   Updated: 2023/05/25 15:17:35 by iakyaou          ###   ########.fr       */
+/*   Updated: 2023/05/26 16:41:06 by iakyaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap_bouns.h"
+#include "../push_swap_bonus.h"
 
 void	cheak_douple(char **douple)
 {

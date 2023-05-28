@@ -6,11 +6,11 @@
 /*   By: iakyaou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 15:48:48 by iakyaou           #+#    #+#             */
-/*   Updated: 2023/05/24 16:30:13 by iakyaou          ###   ########.fr       */
+/*   Updated: 2023/05/26 16:41:06 by iakyaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap_bouns.h"
+#include "../push_swap_bonus.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

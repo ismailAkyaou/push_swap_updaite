@@ -6,7 +6,7 @@
 /*   By: iakyaou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 14:14:31 by iakyaou           #+#    #+#             */
-/*   Updated: 2023/05/25 22:44:39 by iakyaou          ###   ########.fr       */
+/*   Updated: 2023/05/27 22:57:33 by iakyaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,7 @@ int	ft_get_possition_1(t_stack **stack, int location)
 
 void	ft_push_b_to_a(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack		*stack;
-
-	stack = NULL;
-	while ((*stack_b))
+	while (*stack_b)
 	{
 		if ((*stack_b)->index == ft_max_index(*stack_b)
 			|| (*stack_b)->index == ft_max_index(*stack_b) - 1)

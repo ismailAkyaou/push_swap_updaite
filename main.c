@@ -6,7 +6,7 @@
 /*   By: iakyaou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 20:29:34 by iakyaou           #+#    #+#             */
-/*   Updated: 2023/05/25 22:34:00 by iakyaou          ###   ########.fr       */
+/*   Updated: 2023/05/27 19:40:45 by iakyaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,30 +92,26 @@ int	main(int ac, char **av)
 	char		*str;
 	int			i;
 	char		**k;
-	t_stack		*stk_a;
-	t_stack		*stk_b;
-	t_stack		*tmp;
+	t_virs		virs;
 
 	if (ac == 1)
 		return (0);
-	stk_b = NULL;
+	virs.stk_b = NULL;
 	str = ft_strdup("");
 	i = 1;
 	ft_parsing(av);
 	while (av[i])
-	{
 		str = ft_strjoin(str, av[i++]);
-	}
 	k = ft_split(str, ' ');
 	free(str);
 	cheak_douple(k);
-	stk_a = ft_lstnew(ft_atoi(k[0]), -1);
+	virs.stk_a = ft_lstnew(ft_atoi(k[0]), -1);
 	i = 1;
 	while (k[i])
-		ft_lst_add_back(&stk_a, ft_lstnew(ft_atoi(k[i++]), -1));
+		ft_lst_add_back(&virs.stk_a, ft_lstnew(ft_atoi(k[i++]), -1));
 	delete_free(k);
-	ft_index(&stk_a);
-	ft_mini_sort(&stk_a, &stk_b);
-	tmp = stk_a;
-	ft_clean_up(stk_a, stk_b);
+	ft_index(&virs.stk_a);
+	ft_mini_sort(&virs.stk_a, &virs.stk_b);
+	virs.tmp = virs.stk_a;
+	ft_clean_up(virs.stk_a, virs.stk_b);
 }

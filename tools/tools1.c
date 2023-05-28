@@ -6,17 +6,11 @@
 /*   By: iakyaou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 15:24:05 by iakyaou           #+#    #+#             */
-/*   Updated: 2023/05/24 15:24:10 by iakyaou          ###   ########.fr       */
+/*   Updated: 2023/05/27 23:02:51 by iakyaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
-void	ft_error(void)
-{
-	write (2, "ERROR\n", 6);
-	exit (1);
-}
 
 int	is_deget(char dejit)
 {
@@ -71,19 +65,34 @@ void	check_signe1(char **str)
 	}
 }
 
+int	chech_esp(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] != ' ')
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 void	check_signe2(char **str)
 {
 	int		i;
 	int		j;
 	int		k;
 
-	i = 1;
-	k = 0;
-	while (str[i])
+	i = 0;
+	while (str[++i])
 	{
-		j = 0;
+		if (!chech_esp(str[i]))
+			ft_error ();
+		j = -1;
 		k = 0;
-		while (str[i][j])
+		while (str[i][++j])
 		{
 			if ((str[i][j] == '-' || str[i][j] == '+') && j == 0)
 			{
@@ -92,10 +101,8 @@ void	check_signe2(char **str)
 			}
 			if (str[i][j] != ' ' && str[i][j] != '\t' && str[i][j] != '\0')
 				k++;
-			j++;
 		}
-		i++;
 	}
 	if (k == 0)
-		ft_error ();
+		ft_error();
 }

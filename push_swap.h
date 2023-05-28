@@ -6,7 +6,7 @@
 /*   By: iakyaou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 21:42:04 by iakyaou           #+#    #+#             */
-/*   Updated: 2023/05/25 22:49:01 by iakyaou          ###   ########.fr       */
+/*   Updated: 2023/05/27 23:11:54 by iakyaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,14 @@ typedef struct s_stack
 
 typedef struct virs
 {
-	int		possition;
-	int		j;
-	int		k;
-	int		chunks;
-	int		dep;
+	int			possition;
+	int			j;
+	int			k;
+	int			chunks;
+	int			dep;
+	t_stack		*stk_a;
+	t_stack		*stk_b;
+	t_stack		*tmp;
 }	t_virs;
 
 void	ft_error(void);

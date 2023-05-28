@@ -6,11 +6,11 @@
 /*   By: iakyaou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 22:02:17 by iakyaou           #+#    #+#             */
-/*   Updated: 2023/05/24 16:30:59 by iakyaou          ###   ########.fr       */
+/*   Updated: 2023/05/26 16:41:06 by iakyaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap_bouns.h"
+#include "../push_swap_bonus.h"
 
 t_stack	*ft_lstnew(int data, int index)
 {

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_bouns.h                                  :+:      :+:    :+:   */
+/*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iakyaou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 21:42:04 by iakyaou           #+#    #+#             */
-/*   Updated: 2023/05/25 22:48:42 by iakyaou          ###   ########.fr       */
+/*   Updated: 2023/05/26 17:04:25 by iakyaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_BOUNS_H
-# define PUSH_SWAP_BOUNS_H
+#ifndef PUSH_SWAP_BONUS_H
+# define PUSH_SWAP_BONUS_H
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -28,11 +28,15 @@ typedef struct s_stack
 
 typedef struct virs
 {
-	int		possition;
-	int		j;
-	int		k;
-	int		chunks;
-	int		dep;
+	int			possition;
+	int			j;
+	int			k;
+	int			chunks;
+	int			dep;
+	t_stack		*stk_a;
+	t_stack		*stk_b;
+	t_stack		*tmp;
+	char		*line;
 }	t_virs;
 
 void	ft_error(void);
@@ -81,5 +85,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*get_next_line(int fd);
 void	help(char *line, t_stack *stk_a, t_stack *stk_b);
 void	operation(char *line, t_stack **stack_a, t_stack **stack_b);
+void	ft_clean_up_bonus(t_stack *stk_a, t_stack *stk_b);
 
 #endif

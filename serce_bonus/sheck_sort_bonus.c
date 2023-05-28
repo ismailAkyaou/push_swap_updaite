@@ -6,11 +6,11 @@
 /*   By: iakyaou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 17:14:18 by iakyaou           #+#    #+#             */
-/*   Updated: 2023/05/24 16:31:03 by iakyaou          ###   ########.fr       */
+/*   Updated: 2023/05/26 16:41:06 by iakyaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap_bouns.h"
+#include "../push_swap_bonus.h"
 
 int	check_order(t_stack *stack)
 {

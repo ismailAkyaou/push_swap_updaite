@@ -24,7 +24,8 @@ SURS =	main.c \
 		serce/sheck_sort.c \
 		chunks/ft_algo1.c \
 		serce/ft_mini_sort.c \
-		serce/ft_clean_up.c 
+		serce/ft_clean_up.c \
+		serce/ft_error.c
 
 BNS =	push_swap_bonus/checker_bonus.c \
 		tools_bonus/tools_1.c \
@@ -44,7 +45,8 @@ BNS =	push_swap_bonus/checker_bonus.c \
 		serce_bonus/sheck_sort_bonus.c \
 		get_next_line_bonus/get_next_line.c \
 		get_next_line_bonus/get_next_line_utils.c \
-		main_bouns.c
+		main_bouns.c \
+		serce_bonus/ft_clean_up_bonus.c
 
 
 OBJ = $(SURS:.c=.o)
@@ -52,13 +54,14 @@ OBJ_BNS = $(BNS:.c=.o)
 
 all: $(NAME) 
 
-%.o: %.c
+%.o: %.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME) : $(OBJ) $(INCLUDE)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	
-bonus: $(OBJ_BNS) push_swap_bouns.h
+
+bonus: $(NAME_BNS)
+$(NAME_BNS): $(OBJ_BNS) push_swap_bonus.h
 	$(CC) $(CFLAGS) $(OBJ_BNS) -o $(NAME_BNS)
 
 clean:

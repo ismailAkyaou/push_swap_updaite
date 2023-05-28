@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cheak_douple.c                                     :+:      :+:    :+:   */
+/*   ft_clean_up_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iakyaou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/04 14:12:21 by iakyaou           #+#    #+#             */
-/*   Updated: 2023/05/26 22:32:12 by iakyaou          ###   ########.fr       */
+/*   Created: 2023/05/26 16:47:37 by iakyaou           #+#    #+#             */
+/*   Updated: 2023/05/27 22:58:45 by iakyaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../push_swap_bonus.h"
 
-void	cheak_douple(char **douple)
+void	ft_clean_up_bonus(t_stack *stk_a, t_stack *stk_b)
 {
-	int	i;
-	int	j;
-	int	i_nbr;
-	int	j_nbr;
+	t_stack		*temp;
+	t_stack		*temp1;
 
-	i = 0;
-	j = 1;
-	while (douple[i])
+	while (stk_a)
 	{
-		j = i + 1;
-		while (douple[j])
-		{
-			i_nbr = atoi(douple[i]);
-			j_nbr = atoi(douple[j]);
-			if (i_nbr == j_nbr)
-				ft_error();
-			j++;
-		}
-		i++;
+		temp = stk_a;
+		stk_a = stk_a->next;
+		free(temp);
+	}
+	while (stk_b)
+	{	
+		temp1 = stk_b;
+		stk_b = stk_b->next;
+		free(temp1);
 	}
 }

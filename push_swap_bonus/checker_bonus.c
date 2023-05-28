@@ -6,11 +6,11 @@
 /*   By: iakyaou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 20:29:34 by iakyaou           #+#    #+#             */
-/*   Updated: 2023/05/25 22:36:58 by iakyaou          ###   ########.fr       */
+/*   Updated: 2023/05/27 16:02:05 by iakyaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap_bouns.h"
+#include "../push_swap_bonus.h"
 
 void	ft_parsing(char **str)
 {
@@ -57,7 +57,7 @@ void	ft_index(t_stack **stack_b)
 	i = ft_lst_size(*stack_b);
 	while (i)
 	{
-		while ((*stack_b))
+		while (*stack_b)
 		{
 			min = ft_get_min_index(*stack_b);
 			if ((*stack_b)->data == min && (*stack_b)->index == -1)
